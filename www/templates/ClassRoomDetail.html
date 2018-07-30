@@ -1,0 +1,88 @@
+<ion-view view-title="上課教室-詳情">
+    <div class="containet">
+        <ion-content>
+            <div ng-repeat="detail in classRoom track by detail.rID">
+                <div class="card img">
+                    <!-- <div class="item item-divider item-text-wrap" style="background-color: #886AEA; color: #ffffff">
+                        {{detail.title}}
+                    </div> -->
+                    <div class="item item-text-wrap">
+                        <div class="row">
+                            <div class="Lecture">上課日期：</div>
+                            <label ng-show="{{detail.ClassDate != null}}">{{detail.ClassDate | date:'yyyy-MM-dd'}}</label>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">上課時間：</div>
+                                <label>{{detail.ClassTime}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">科目：</div>
+                                <label>{{detail.CourseName}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">老師：</div>
+                                <label>{{detail.TeacherName}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">堂數：</div>
+                                <label>{{detail.ClassSort}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">上課教室：</div>
+                                <label>{{detail.Classroom}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">同步(旁聽)教室1：</div>
+                                <label>{{detail.Classroom1}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">同步(旁聽)教室2：</div>
+                                <label>{{detail.Classroom2}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">同步(旁聽)教室3：</div>
+                                <label>{{detail.Classroom3}}</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="Lecture">備註說明：</div>
+                            </div>
+                            <div class="row" style="margin-top: 2px;">
+                                <label>{{detail.Remarks}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item item-divider" style="background-color: #886AEA; color: #ffffff; ">
+                        活動詳情
+                    </div>
+                    <div class="item item-text-wrap" id="detailImg" ng-bind-html="detail.content"></div> -->
+                </div>
+                <!-- <div class="row" style="text-align: center;">
+                    <div ng-view="detailView"></div>
+                    <div class="col col-33">
+                        <button ng-show="{{detail.LastNB != null}}" class=" button button-balanced button-dark" ng-click="reload(detail.LastNB)">上一則</button>
+                    </div>
+                    <div class="col col-33 col-offset-33">
+                        <button class=" button button-balanced button-dark" ng-click="reload(detail.NextNB)">下一則</button>
+                    </div>
+                </div> -->
+            </div>
+        </ion-content>
+    </div>
+</ion-view>

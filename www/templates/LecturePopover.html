@@ -1,0 +1,13 @@
+<ion-popover-view>
+  <ion-content>
+    <md-radio-group class="md-primary" ng-model="lectureData.name">
+        <md-radio-button ng-value="">
+            全部
+        </md-radio-button>
+        <md-radio-button ng-repeat="item in categoryItem"
+                          ng-value="item">
+            {{item.category}}
+        </md-radio-button>
+    </md-radio-group>
+  </ion-content>
+</ion-popover-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="教材進度">
+<ion-nav-buttons side="right">
+  <button class="button button-clear" ng-click="popover.show($event)">
+    課程
+  </button>
+</ion-nav-buttons>
+<ion-content>
+	<div class="card" ng-repeat="item in lecture | filterBy: ['CourseName + TeacherName + ClassName']: lectureData.name.category">
+		<!-- <input ng-model="lectureData.name.category"/> -->
+	  <div class="item item-text-wrap">
+	    <div>
+	    	<span class='Lecture'>課　　程：</span>{{item.CourseName}}-{{item.TeacherName}}-{{item.ClassName}}
+	    </div>
+	    <div>
+	    	<span class='Lecture'>教材編號：</span>{{item.HandoutCode}}
+	    </div>
+	    <div>
+	    	<span class='Lecture'>備註說明：</span>{{item.HandoutNote}}
+	    </div>
+	  </div>
+	</div>
+  <div style="margin-top:20px">
+    <h3 ng-if="item.length == 0" class="center">目前暫無教材進度資料</h3>
+  </div>
+</ion-content>
+</ion-view>

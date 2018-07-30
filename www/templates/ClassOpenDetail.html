@@ -1,0 +1,42 @@
+<ion-view view-title="新班開課-內容">
+    <div class="containet">
+        <ion-content>
+            <div ng-repeat="detail in ckClass track by detail.Nb">
+                <div class="card img">
+                    <div class="item item-divider item-text-wrap" style="background-color: #a1d5d3; color: #ffffff; font-size: 16px;">
+                        {{detail.title}}
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div>
+                            活動時間：
+                            <label ng-show="{{detail.StartDate == null}}">即日起</label>
+                            <label ng-show="{{detail.StartDate != null}}">{{detail.StartDate | date:'yyyy-MM-dd HH:mm'}}</label>
+                            <label> 至 {{detail.EndDate | date:'yyyy-MM-dd HH:mm'}}</label>
+                        </div>
+                        <div>
+                            電話：
+                            <label>{{detail.phone}}</label>
+                        </div>
+                        <div>
+                            地址：
+                            <label>{{detail.address}}</label>
+                        </div>
+                    </div>
+                    <div class="item item-divider" style="background-color: #a1d5d3; color: #ffffff; font-size: 16px;">
+                        活動詳情
+                    </div>
+                    <div class="item item-text-wrap" id="classDetail" ng-bind-html="detail.content" tap-the-link></div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div ng-view="detailView"></div>
+                    <div class="col">
+                        <button ng-show="{{detail.LastNB != null}}" class=" button button-balanced button-dark" ng-click="reload(detail.LastNB)">上一則</button>
+                    </div>
+                    <div class="col">
+                        <button ng-show="{{detail.NextNB != null}}" class=" button button-balanced button-dark" ng-click="reload(detail.NextNB)">下一則</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </ion-content>
+</ion-view>

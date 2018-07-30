@@ -1,0 +1,12 @@
+<ion-view view-title="新班開課">
+<ion-content>
+  <ion-list>
+      <ion-item class="item item-text-wrap" ng-repeat="classList in classLists" href="#/app/main/classLists/{{classList.NB}}">
+        <img src="img/icon_newSmall.png" style="max-height: 40px; max-width: 40px" ng-show="classList.isNew">{{classList.title}}
+      </ion-item>
+  </ion-list>
+
+    <!-- 滑動更新 -->
+	<ion-infinite-scroll on-infinite="loadMoreList()" ng-if="!noMore" distance="10%"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>

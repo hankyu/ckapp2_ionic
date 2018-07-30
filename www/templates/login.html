@@ -1,0 +1,26 @@
+<ion-modal-view layout="column" scroll="false">
+    <!-- <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div> -->
+
+  <ion-content style="background-color: #f7f7f7" scroll="false">
+    <form>
+      <!-- <div class="content">
+        <h1 style="color: black;" layout layout-align="center center">志光公職</h1>
+      </div> -->
+
+      <div style="padding-top: 50px;">
+        <div>
+        <h1 style="color: #6bb8ea;font-weight: bold;" layout layout-align="center center">公職王</h1>
+      </div>
+
+      <ion-md-input placeholder="使用者帳號" hightlight-color="energized" type="text"  required="string"  ng-model="loginData.UID" style="border-width: 0px 0px 0px 0px; width: 95%"></ion-md-input>
+      <ion-md-input placeholder="使用者密碼" hightlight-color="energized" type="password"  required="string"  ng-model="loginData.PW" style="border-width: 0px 0px 0px 0px; width: 95%"></ion-md-input>
+      <div layout layout-align="center center " style="padding-top: 30px">
+        <!-- when you want to use 'GO' in the ios you just set type="submit"  -->
+        <button class="button button-block button-assertive ink-dark" type="button" ng-click="doLogin()">登入</button> 
+        <!-- <button class="button button-block button-assertive ink-dark">Log in</button> -->
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

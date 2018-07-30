@@ -1,0 +1,19 @@
+<ion-view view-title="班別設定">
+  <ion-content>
+  	<div ng-if="isLogin == 1" >
+	  	<div class="item item-divider">
+	    	已報名的補習班
+	    </div>
+	  	<div class="list">
+	  		<!-- 在使用radio button時 要預設default 必須使用 ng-value -->
+	  		<ion-radio class="item item-radio" ng-repeat="item in MyLOD track by item.Lid | orderBy:item.Lid " ng-model="iData.ClassName" ng-value="item.Lname" ng-change="iDataChange(iData.ClassName)">
+	  			{{item.Lname}}
+	  		</ion-radio>
+	  	</div>
+	</div>
+	<div ng-show="isLogin != 1">
+			<h2 class="center" style="margin-top: 20px">請先登入
+			</h2>
+		</div>
+  </ion-content>
+</ion-view>

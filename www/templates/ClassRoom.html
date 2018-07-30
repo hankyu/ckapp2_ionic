@@ -1,0 +1,15 @@
+<ion-view view-title="上課教室"> 
+	<ion-content>
+	  <ion-list>
+	      <ion-item class="item item-text-wrap" ng-repeat="item in classRoom | filter: lectureData.name" href="#/app/main/classroom/{{item.rID}}">
+	        <img src="img/icon_newSmall.png" style="max-height: 40px; max-width: 40px" ng-show="item.isNew">
+	        <h2 style="color: #FF6666;">{{item.CourseName}}({{item.TeacherName}})</h2>
+			<div><tt>{{item.ClassSort}} - {{item.Classroom}}</tt><tt style="position:absolute; right: 30px;">{{item.ClassDate | date:'yyyy-MM-dd'}}</tt></div>
+	      </ion-item>
+	   </ion-list>
+
+	    <!-- 滑動更新 -->
+	<!-- <ion-infinite-scroll on-infinite="loadMoreList()" ng-if="!noMore" distance="1%"></ion-infinite-scroll> -->
+	<h3 ng-if="show" class="center">目前無上課教室資料</h3>
+</ion-content>
+</ion-view>

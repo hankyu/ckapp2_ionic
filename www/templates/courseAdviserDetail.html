@@ -1,0 +1,24 @@
+<ion-view view-title="課業諮詢-詳情">
+  <ion-content scroll="false">
+    <div class="card" style="background: #69c;">
+      <div class="item item-text-wrap" style="color:#fff; font-weight: 700;">
+        <div>班系: {{detailData.SerName}}</div>  
+        <div>標題: {{detailData.myTitle}}</div>  
+        <div>內容: {{detailData.myContent}}</div>  
+      </div>
+
+
+      <div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap" style="color:#000; font-weight: 700;text-align: center;">
+        <div ng-show="detailData.status == 'false'">（ 目前尚未回覆，請您稍待 ）</div>
+        <div ng-show="detailData.status == 'true'">{{detailData.myReply}}</div>
+      </div>
+      <div>
+      	
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

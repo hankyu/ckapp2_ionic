@@ -1,0 +1,52 @@
+<ion-view view-title="公職王">
+  <ion-content class="center" style="margin-top: 5px;overflow-y: auto;" scroll="false">
+	  <div class="row" >
+	  	<div class="col col-33 ink" ui-sref="app.main-newsLists">
+		  	<img src="img/icon1.png" style="max-height: 60%;max-width: 60%;">
+		  	<span class="badge badge-assertive badgecount" ng-if="iconbadge.newsBadge.badge != 0">{{iconbadge.newsBadge.badge}}</span><br/>活動快報
+		</div>
+	  	<div class="col col-33 ink" ui-sref="app.main-classLists"><img src="img/icon2.png" style="max-height: 60%;max-width: 60%">
+	  	<span class="badge badge-assertive badgecount" ng-if="iconbadge.newClassBadge.badge != 0">{{iconbadge.newClassBadge.badge}}</span><br/>新班開課
+		</div>
+	  	<div class="col col-33 ink" ui-sref="app.main-CourseMove"><img src="img/icon3.png" style="max-height: 60%;max-width: 60%">
+	  	<span class="badge badge-assertive badgecount" ng-if="iconbadge.classChangeBadge.badge != 0">{{iconbadge.classChangeBadge.badge}}</span><br/>課程異動
+		</div>
+	  </div>
+	  <div class="row" style="margin-top: 25px ">
+	  	<div class="col col-33 ink"><img src="img/icon_map.png" style="max-height: 60%;max-width: 60%" ng-click="classRoom();">
+	  	<br/>上課教室
+		</div>
+
+	  <div class="col col-33  ink"><img src="img/icon_teach.png" style="max-height: 60%;max-width: 60%"  ng-click="lecture();">
+	  	<br/>教材進度
+		</div>
+	  	<div class="col col-33 ink"><img src="img/icon_reservation.png" style="max-height: 60%;max-width: 60%" ng-click="LOD();"><br/>補課預約
+		</div>
+	  </div>
+	  <div class="row" style="margin-top: 25px ">
+	  	<div class="col col-33 ink"><img src="img/public.png" style="max-height: 60%;max-width: 60%" ng-click="checkPublic();"><br/>行動公職王
+		</div>
+	  	<div class="col col-33 ink"><img src="img/test.png" style="max-height: 60%;max-width: 60%" ng-click="YouTest();"><br/>平時測驗
+		</div>
+	  	<div class="col col-33 ink"><img src="img/icon_exam.png" style="max-height: 60%;max-width: 60%" ng-click="HistoryExam();"><br/>歷屆試題
+		</div>
+	  </div>
+    <div class="row" style="margin-top:25px ">
+	  	<div class="col col-33 ink" ui-sref="app.commit">
+          <!-- <img src="img/public.png" style="max-height: 60%;max-width: 60%" ng-click="checkPublic();"><br/>行動公職王 -->
+          <img src="img/icon_commit.png" style="max-height: 60%;max-width: 60%"><br/>問題反映
+      </div>
+	    <div class="col col-33 ink" ui-sref="app.courseAdviser">
+        <img src="img/course-adviser.png" style="max-height: 60%;max-width: 60%"><br/>課業諮詢
+      <!-- <img src="img/test.png" style="max-height: 60%;max-width: 60%" ng-click="YouTest();"><br/>公職測驗王 -->
+		  </div>
+	     <div class="col col-33 ink">
+      <!-- <img src="img/icon_exam.png" style="max-height: 60%;max-width: 60%" ng-click="HistoryExam();"><br/>歷屆試題 -->
+		  </div>
+	  </div>
+
+	  <!-- <div class="col col-33">
+	  	<button ng-click="badge();">點擊測試</button>
+	  </div> -->
+  </ion-content>
+</ion-view>

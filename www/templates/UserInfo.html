@@ -1,0 +1,26 @@
+<ion-view view-title="基本資料">
+  <ion-content >
+	<div ng-show="isLogin == 1" >
+			<div class="item" ng-style="(userInfo.sex == 1) ? {backgroundColor:'#6bb8ea'} : {backgroundColor:'#f06b8e'}">
+				<div class="content" style="text-align:center;">
+			    	<img class="imageShadow" src="img/icon_man2.png" ng-show="userInfo.sex == 1" style="text-align: center;">
+			    	<img class="imageShadow" src="img/icon_woman.png" ng-show="userInfo.sex != 1">
+			    	<h2 style="color: white">{{userInfo.myName}}</h2>
+
+				</div>
+			</div>
+			<div class="item item-body">
+					<div>會員帳號：{{userInfo.myUID}}</div>
+					<div>真實姓名：{{userInfo.myName}}</div>
+					<div>出生日期：{{userInfo.b_y}}/{{userInfo.b_m}}/{{userInfo.b_d}}</div>
+					<div>E-mail：{{userInfo.email}}</div>
+					<div>聯絡電話：{{userInfo.mobile}}</div>
+					<div>通訊地址：{{userInfo.postcode}} {{userInfo.address1}}{{userInfo.paddress3}}{{userInfo.address3}}</div>
+			</div>
+	</div>
+	<div ng-show="isLogin != 1">
+		<h2 class="center" style="margin-top: 20px">請先登入
+		</h2>
+	</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-modal-view layout="column" scroll="false">
+    <!-- <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div> -->
+
+  <ion-content style="background-color: #f7f7f7; padding: 0px 5px 0px 5px; margin-top:10px;" scroll="false">
+    <form style="margin-top:10px;">
+      <!-- <div class="content">
+        <h1 style="color: black;" layout layout-align="center center">志光公職</h1>
+      </div> -->
+      <div >
+        <h3 style="color: #6bb8ea;font-weight: bold;" layout layout-align="center center">{{LODLname}}</h3>
+      </div>
+
+      <div style="margin-bottom: 10px">
+        <label for="">
+          <span>主題</span>
+          <input type="text" style="width: 100%;border-bottom: 1px solid #ddd;" placeholder="請輸入您的主題" ng-model="myTitle">
+        </label>
+      </div>
+      <div >
+        <label for="">
+          <span>內容</span>
+          <textarea rows="5" cols="50" style="width: 100%;border-bottom: 1px solid #ddd;" placeholder="請輸入您的問題" ng-model="myContent"/>
+        </label>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <button class=" button button-assertive" ng-click="modalClose();"><< 返回列表</button>
+        </div>
+        <div class="col col-50 " style="text-align: right;">
+          <button class=" button button-balanced" ng-disabled="isSendQ" ng-click="sentQuestion(myTitle, myContent);">送出問題</button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

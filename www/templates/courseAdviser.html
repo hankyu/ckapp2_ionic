@@ -1,0 +1,37 @@
+<ion-view view-title="課業諮詢">
+  <ion-nav-buttons side="right">
+    <button class="ion-plus-round button button-clear" ng-click="addQuestion()">
+
+    </button>
+  </ion-nav-buttons>
+  <ion-content scroll="false">
+    <div class="card" style="background: darkseagreen;">
+      <div class="item item-text-wrap center" style="color:#fff; font-weight: 700;">
+        {{userInfo.myName}}  您好，以下是您曾經詢問過的項目
+        <div class="center">
+          (此為課業諮詢區。)
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-content style="margin-top: 130px;top: 20px;">
+    <ion-list>
+      <ion-item ng-repeat="item in courseList" ng-click="goDetail(item);">
+        <h2 class="" style="margin-bottom: 10px">
+          {{item.myTitle}}
+        </h2>
+        <div class="">
+          <span>{{item.cmt_time | date: 'yyyy/MM/dd h:mma'}}</span><span style="float: right;" class="error-color" ng-show="item.status == 'false'">未回覆</span>
+        </div>
+      </ion-item>
+    </ion-list>
+    <!-- <ion-list>
+        <ion-item class="item item-text-wrap" ng-repeat="classList in classLists" href="#/app/main/classLists/{{classList.NB}}">
+          <img src="img/icon_newSmall.png" style="max-height: 40px; max-width: 40px" ng-show="classList.isNew">{{classList.title}}
+        </ion-item>
+    </ion-list> -->
+
+      <!-- 滑動更新 -->
+  	<!-- <ion-infinite-scroll on-infinite="loadMoreList()" ng-if="!noMore" distance="10%"></ion-infinite-scroll> -->
+  </ion-content>
+</ion-view>

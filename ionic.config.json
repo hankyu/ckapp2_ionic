@@ -1,0 +1,14 @@
+{
+  "name": "公職王",
+  "app_id": "com.richway.ckapp1",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
